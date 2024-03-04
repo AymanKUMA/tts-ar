@@ -7,10 +7,10 @@ log_dir: logs/exp_fp
 checkpoint_dir: checkpoints/exp_fp
 
 # dataset
-train_wavs_path: G:/data/arabic-speech-corpus/wav_new
+train_wavs_path: ../arabicDataset/wav
 train_labels: ./data/train_phon.txt
 
-test_wavs_path: G:/data/arabic-speech-corpus/test set/wav_new
+test_wavs_path: ../arabicDataset/test_set/wav
 test_labels: ./data/test_phon.txt
 
 label_pattern: '"(?P<filename>.*)" "(?P<phonemes>.*)"'

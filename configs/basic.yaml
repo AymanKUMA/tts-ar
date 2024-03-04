@@ -22,3 +22,9 @@ vocoder_config_path: pretrained/hifigan-asc-v1/config.json
 shakkala_path: pretrained/diacritizers/shakkala_second_model6.pth
 shakkelha_path: pretrained/diacritizers/shakkelha_rnn_3_big_20.pth
 
+log_dir: logs/exp_fp_adv
+checkpoint_dir: checkpoints/exp_fp_adv
+
+# dataset
+train_wavs_path: root/arabicDataset/wav
+train_labels: ./data/train_phon.txt

@@ -170,7 +170,7 @@ class ArabDataset(Dataset):
 class ArabDataset4FastPitch(Dataset):
     def __init__(self, 
                  txtpath: str = './data/train_phon.txt',
-                 wavpath: str = 'G:/data/arabic-speech-corpus/wav_new',                
+                 wavpath: str = 'root/arabicDataset/wav',                
                  label_pattern: str = '"(?P<filename>.*)" "(?P<phonemes>.*)"',
                  f0_dict_path: str = './data/pitch_dict.pt',
                  f0_mean: float = 130.05478, 
@@ -258,7 +258,7 @@ class ArabDataset4FastPitch(Dataset):
 class DynBatchDataset(ArabDataset4FastPitch):
     def __init__(self, 
                  txtpath: str = './data/train_phon.txt',
-                 wavpath: str = 'G:/data/arabic-speech-corpus/wav_new',
+                 wavpath: str = 'root/arabicDataset/wav',
                  label_pattern: str = '"(?P<filename>.*)" "(?P<phonemes>.*)"',
                  f0_dict_path: str = './data/pitch_dict.pt',
                  f0_mean: float = 130.05478, 

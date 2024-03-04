@@ -1,17 +1,16 @@
-
 # restore_model: ''
-restore_model: ./pretrained/tacotron2_ar_adv.pth
-# restore_model: ./checkpoints/exp_tc2/states.pth
+restore_model: .\pretrained\tacotron2_ar_adv.pth
+# restore_model: .\checkpoints\exp_tc2\states.pth
 
-log_dir: logs/exp_tc2
-checkpoint_dir: checkpoints/exp_tc2
+log_dir: logs\exp_tc2
+checkpoint_dir: checkpoints\exp_tc2
 
 # dataset
-train_wavs_path: G:/data/arabic-speech-corpus/wav_new
-train_labels: ./data/train_phon.txt
+train_wavs_path: ../arabicDataset/wav
+train_labels: .\data\train_phon.txt
 
-test_wavs_path: G:/data/arabic-speech-corpus/test set/wav_new
-test_labels: ./data/test_phon.txt
+test_wavs_path: ../arabicDataset/test_set/wav
+test_labels: .\data\test_phon.txt
 
 label_pattern: '"(?P<filename>.*)" "(?P<phonemes>.*)"'
 # label_pattern: (?P<arabic>.*)\|(?P<filestem>.*)

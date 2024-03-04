@@ -8,7 +8,7 @@ class TBLogger(SummaryWriter):
 
     def add_training_data(self, meta, grad_norm,
                           learning_rate, tb_step: int):
-
+        
         for k, v in meta.items():
             self.add_scalar(f'train/{k}', v.item(), tb_step)
         self.add_scalar("train/grad_norm", grad_norm, tb_step)
