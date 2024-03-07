@@ -1,4 +1,3 @@
-
 restore_model: ''
 # restore_model: ./pretrained/fastpitch_ar_adv.pth
 # restore_model: ./checkpoints/exp_fp_adv/states.pth
@@ -7,11 +6,14 @@ log_dir: logs/exp_fp_adv
 checkpoint_dir: checkpoints/exp_fp_adv
 
 # dataset
-train_wavs_path: ../arabicDataset/wav
+train_wavs_path: ../dataset/arabicDataset/wav_new
 train_labels: ./data/train_phon.txt
 
-test_wavs_path: ../arabicDataset/test_set/wav
+test_wavs_path: ../dataset/arabicDataset/test_set/wav
 test_labels: ./data/test_phon.txt
+
+label_pattern: '"(?P<filename>.*)" "(?P<phonemes>.*)"'
+# label_pattern: (?P<arabic>.*)\|(?P<filestem>.*)
 
 label_pattern: '"(?P<filename>.*)" "(?P<phonemes>.*)"'
 # label_pattern: (?P<arabic>.*)\|(?P<filestem>.*)
@@ -38,6 +40,9 @@ g_beta2: 0.99   # beta2 for AdamW optimizer (generator)
 d_lr: 1.0e-4    # lr for AdamW optimizer (discriminator)
 d_beta1: 0.     # beta1 for AdamW optimizer (discriminator)
 d_beta2: 0.99   # beta2 for AdamW optimizer (discriminator)
+
+# epochs
+epochs: 30
 
 n_save_states_iter: 100
 n_save_backup_iter: 1000

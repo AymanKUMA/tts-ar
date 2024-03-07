@@ -99,15 +99,14 @@ def training_loop(model,
             # LOGGING
             print(f"loss: {loss.item()}, grad_norm: {grad_norm.item()}")
 
-            # writer.add_training_data(loss.item(), grad_norm.item(),
-            #                         config.learning_rate, n_iter)
+            # writer.add_training_data(loss.item(), grad_norm.item(), config.learning_rate, n_iter)
             # Modify the call to add_training_data to pass loss as part of a dictionary
             writer.add_training_data({'loss': loss}, grad_norm.item(), config.learning_rate, n_iter)
 
 
             if n_iter % config.n_save_states_iter == 0:
                 save_states(f'states.pth', model, optimizer,
-                            n_iter, epoch, config, config)
+                            n_iter, epoch, config)
 
             if n_iter % config.n_save_backup_iter == 0 and n_iter > 0:
                 save_states(f'states_{n_iter}.pth', model,

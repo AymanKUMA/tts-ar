@@ -7,9 +7,9 @@ import numpy as np
 from tqdm import tqdm
 
 # %%
-
-wav_path = 'G:/data/arabic-speech-corpus/wav'
-wav_new_path = 'G:/data/arabic-speech-corpus/wav_new'
+# Specify the relative path to the WAV directory
+wav_path = '../../dataset/arabicDataset/wav'
+wav_new_path = '../../dataset/arabicDataset/wav_new'
 
 sr_target = 22050
 silence_audio_size = 256 * 3

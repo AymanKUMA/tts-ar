@@ -84,4 +84,3 @@ def validate(model, test_loader, writer, device, n_iter):
     model.train()
 
     return val_loss
-
