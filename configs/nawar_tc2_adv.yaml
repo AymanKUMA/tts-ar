@@ -29,5 +29,8 @@ d_lr: 1.0e-4    # lr for AdamW optimizer (discriminator)
 d_beta1: 0.     # beta1 for AdamW optimizer (discriminator)
 d_beta2: 0.99   # beta2 for AdamW optimizer (discriminator)
 
+#epochs
+epochs: 30
+
 n_save_states_iter: 10
 n_save_backup_iter: 1000
