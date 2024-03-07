@@ -1,6 +1,6 @@
 
-# restore_model: ''
-restore_model: ./pretrained/fastpitch_ar_adv.pth
+restore_model: ''
+# restore_model: ./pretrained/fastpitch_ar_adv.pth
 # restore_model: ./checkpoints/exp_fp/states.pth
 
 log_dir: logs/exp_fp

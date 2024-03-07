@@ -7,10 +7,10 @@ log_dir: logs/exp_tc2_adv
 checkpoint_dir: checkpoints/exp_tc2_adv
 
 # dataset
-train_wavs_path: ../arabicDataset/wav
+train_wavs_path: ../dataset/arabicDataset/wav_new
 train_labels: ./data/train_phon.txt
 
-test_wavs_path: ../arabicDataset/test_set/wav
+test_wavs_path: ../dataset/arabicDataset/test_set/wav
 test_labels: ./data/test_phon.txt
 
 label_pattern: '"(?P<filename>.*)" "(?P<phonemes>.*)"'
