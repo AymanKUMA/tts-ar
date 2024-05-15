@@ -1,5 +1,7 @@
 # %%
-import os
+import sys, os
+sys.path.append(os.path.abspath(".."))
+
 import torch
 import torchaudio
 import librosa
@@ -8,8 +10,8 @@ from tqdm import tqdm
 
 # %%
 # Specify the relative path to the WAV directory
-wav_path = '../../dataset/arabicDataset/wav'
-wav_new_path = '../../dataset/arabicDataset/wav_new'
+wav_path = '../../dataset/dataset-wamid/train/wav'
+wav_new_path = '../../dataset/dataset-wamid/train/wav_new'
 
 sr_target = 22050
 silence_audio_size = 256 * 3

@@ -1,5 +1,8 @@
 # This file needs to be run in the main folder
 # %%
+import sys, os
+sys.path.append(os.path.abspath(".."))
+
 import text
 from utils import read_lines_from_file
 
@@ -15,7 +18,7 @@ def write_lines_to_file(path, lines, mode='w', encoding='utf-8'):
 # %%
 
 
-lines = read_lines_from_file('./data/train-orthographic-transcript.txt')
+lines = read_lines_from_file('../data/train-orthographic-transcript.txt')
 #lines = read_lines_from_file('./data/test-orthographic-transcript.txt')
 
 new_lines_arabic = []
@@ -45,12 +48,12 @@ for line in lines:
 
 # %% train
 
-write_lines_to_file('./data/train_arab.txt', new_lines_arabic)
-write_lines_to_file('./data/train_phon.txt', new_lines_phonetic)
-write_lines_to_file('./data/train_buckw.txt', new_lines_buckw)
+write_lines_to_file('../data/train_arab.txt', new_lines_arabic)
+write_lines_to_file('../data/train_phon.txt', new_lines_phonetic)
+write_lines_to_file('../data/train_buckw.txt', new_lines_buckw)
 
 # %% test
-
-write_lines_to_file('./data/test_arab.txt', new_lines_arabic)
-write_lines_to_file('./data/test_phon.txt', new_lines_phonetic)
-write_lines_to_file('./data/test_buckw.txt', new_lines_buckw)
+# Generates the test set text 
+# write_lines_to_file('../data/test_arab.txt', new_lines_arabic)
+# write_lines_to_file('../data/test_phon.txt', new_lines_phonetic)
+# write_lines_to_file('../data/test_buckw.txt', new_lines_buckw)

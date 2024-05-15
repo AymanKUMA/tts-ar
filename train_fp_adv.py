@@ -1,5 +1,7 @@
+import sys, os
+sys.path.append(os.path.abspath(".."))
+
 import argparse
-import os
 
 import torch
 from torch.utils.data import DataLoader
@@ -112,7 +114,11 @@ writer = SummaryWriter(config.log_dir)
 
 model.train()
 
+print(f"Checkpoint: {n_epoch} Num of epochs:{config.epochs}")
+print("---------------------------------------")
+
 for epoch in range(n_epoch, config.epochs):
+    print(f"epoch: {epoch}")
     train_dataset.shuffle()
     for batch in train_loader:
 
@@ -194,7 +200,7 @@ for epoch in range(n_epoch, config.epochs):
 
 save_states(f'states.pth', model, critic,
             optimizer, optimizer_d, n_iter,
-            epoch, net_config, config)
+            config.epochs, net_config, config)
 
 
 # %%

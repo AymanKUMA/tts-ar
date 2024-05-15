@@ -1,6 +1,9 @@
 # %%
+import sys, os
+sys.path.append(os.path.abspath(".."))
+
 import argparse
-import os
+
 import torch
 from torch.utils.data import DataLoader
 from models.tacotron2.tacotron2_ms import Tacotron2MS
